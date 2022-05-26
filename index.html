@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Simple X&amp;O</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="./">Simple X&amp;O</a>
+            <div class="my-2 my-lg-0">
+                <span class="navbar-text">&copy; Sargis Kirakosyan 2020</span>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div id="gameMessage" class="row">
+            <div class="col-md-4 offset-md-2 alert mt-3" role="alert">
+                <h4 class="alert-heading text-center message-header"></h4>
+                <p class="text-center message-text"></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2 mt-5 switch-side">
+                <label class="switch">
+                    <input id="gameCheck" type="checkbox" onchange="switchChange()">
+                    <span class="slider" data-on="Single player" data-off="Multiplayer"></span>
+                </label>
+            </div>
+            <div class="col-md-6 offset-md-1 mt-5">
+                <div id="gameArea"></div>
+            </div>
+            <div class="col-md-3 mt-5 game-score">
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>

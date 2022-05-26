@@ -1,0 +1,109 @@
+#game_Area {
+    width: 500px;
+    height: 500px;
+    margin: 0 auto;
+}
+
+.cell {
+    width: 150px;
+    height: 150px;
+    font-size: 50px !important;
+    border-radius: 50%;
+    margin: 0px 5px 5px;
+    border: 2px solid #2b2b2b;
+    float: left;
+    background: #FFFFFF;
+    transition: background .4s;
+    color: #2B2B2B;
+    text-align: center;
+    user-select: none !important;
+    cursor: pointer;
+}
+
+.cell:active {
+    background: #eee;
+}
+
+#gameMessage {
+    display: none;
+}
+
+#gameMessage .alert {
+    position: absolute;
+    z-index: 100;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 200px;
+    height: 68px;
+}
+
+.switch #gameCheck {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    font-size: 18px;
+    color: #FFFFFF;
+    line-height: 68px;
+    border-radius: 4px;
+    background: #00b8e6;
+    transition: .3s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 60px;
+    width: 35%;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .3s;
+    border: 1px solid #F2F3F4;
+    border-radius: 4px;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+#gameCheck:checked + .slider {
+    background-color: #33cc33;
+}
+
+#gameCheck:focus + .slider {
+    box-shadow: 0 0 1px #33cc33;
+}
+
+#gameCheck:checked + .slider:before {
+    transform: translateX(122px);
+}
+
+#gameCheck:checked + .slider:after {
+    content: attr(data-on);
+    margin-left: 7%;
+}
+
+#gameCheck:not(:checked) + .slider:after {
+    content: attr(data-off);
+    position: absolute;
+    right: 8%;
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/*# sourceMappingURL=styles.css.map */
